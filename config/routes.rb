@@ -16,9 +16,6 @@ Rails.application.routes.draw do
   get '/contact' => 'site#contact'
   #MARIAH
   get '/Admin' => 'user#admin_login'
-  get '/logout' => 'user#logout'
-  #MARIAH
-  get '/signedinuserprofile' => 'profile#signedinuserprofile'
 
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
