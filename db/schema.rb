@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170705172802) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -38,7 +41,7 @@ ActiveRecord::Schema.define(version: 20170705172802) do
     t.text "bio"
     t.integer "country_id"
     t.string "interests"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_profiles_on_user_id"
@@ -62,4 +65,5 @@ ActiveRecord::Schema.define(version: 20170705172802) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "profiles", "users"
 end

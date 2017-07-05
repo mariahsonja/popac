@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :profiles
+  resource :profile
   devise_for :admins
   devise_for :users
   get 'site/about'
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/Admin' => 'user#admin_login'
   get '/logout' => 'user#logout'
   #MARIAH
-  get '/signedinuserprofile' => 'profiles#signedinuserprofile'
+  get '/signedinuserprofile' => 'profile#signedinuserprofile'
 
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

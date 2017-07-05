@@ -1,11 +1,13 @@
 class ProfilesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
+  
 
   # GET /profiles
   # GET /profiles.json
-  def index
-    @profiles = Profile.all
-  end
+ # def index
+  #  @profiles = Profile.all
+  #end
 
   # GET /profiles/1
   # GET /profiles/1.json
@@ -67,14 +69,14 @@ class ProfilesController < ApplicationController
     end
   end
   
-  #MARIAH: if user has no profile, he/she is redirect to create one
+  #MARIAH: if user has no profile, he/she is redirected to create one
   def signedinuserprofile
     profile = Profile.find_by_user_id(current_user.id)
     if profile.nil?
-      redirect_to "/profiles/new"
+      redirect_to "/profile/new"
     else
       @profile = Profile.find_by_user_id(current_user.id)
-      redirect_to "/profiles/#{@profile.id}"
+      redirect_to "/profile/#{@profile.id}"
     end
   end
 
@@ -82,7 +84,7 @@ class ProfilesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_profile
-      @profile = Profile.find(params[:id])
+      @profile = current_user.profile
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
