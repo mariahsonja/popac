@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  #MARIAH
+  root to: "profiles#show"
+  
   resource :profile
   devise_for :admins
   devise_for :users
+  
+  
   get 'site/about'
   get 'site/contact'
   
