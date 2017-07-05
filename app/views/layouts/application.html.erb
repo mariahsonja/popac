@@ -12,18 +12,20 @@
   <body>
     <div id=header>
       <!--Reader image here -->
-    </div>
-    <div id='menu'>
-      <div id='navbar'>
-        <ul>
-          <li> <a href="/profiles">Profile</a></li>
-          <li> <a href="/about">About PoPac</a></li>
-          <li> <a href="/contact">Contact Us</a></li>
-          <li> <a href="/Admin">Login</a></li>
-          <li> <a href="/logout">Logout</a></li>
-        </ul>
+      <div id='menu'>
+        <div id='navbar'>
+          <ul>
+            <li> <a href="/profile">Profile</a></li>
+            <li> <a href="/about">About PoPac</a></li>
+            <li> <a href="/contact">Contact Us</a></li>
+            <li> <a href="/Admin">Login</a></li>
+            <li> <a href="/logout">Logout</a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <div id='container'>
+      <%= yield %>
+    </div>
   </body>
 </html>
