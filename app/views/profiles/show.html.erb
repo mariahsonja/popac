@@ -12,7 +12,7 @@
 
 <p>
   <strong>Country:</strong>
-  <%= @profile.country %>
+  <%= @profile.country_id %>
 </p>
 
 <p>
@@ -20,10 +20,6 @@
   <%= @profile.interests %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @profile.user %>
-</p>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<%= link_to 'Back', profile_path %>

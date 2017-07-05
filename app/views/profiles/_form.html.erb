@@ -1,4 +1,4 @@
-<%= form_with(model: profile, local: true) do |form| %>
+<%= form_with(model: profile, url: profile_path, local: true) do |form| %>
   <% if profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
@@ -22,18 +22,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :country %>
-    <%= form.text_field :country, id: :profile_country %>
+    <%= form.label :country_id %>
+    <%= form.text_field :country_id, id: :profile_country_id %>
   </div>
 
   <div class="field">
     <%= form.label :interests %>
     <%= form.text_field :interests, id: :profile_interests %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :profile_user_id %>
   </div>
 
   <div class="actions">
