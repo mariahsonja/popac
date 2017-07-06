@@ -1,4 +1,5 @@
 class Country < ApplicationRecord
-  belongs_to :profile
+  has_many :profiles
   
+  validates :name, uniqueness: true
 end

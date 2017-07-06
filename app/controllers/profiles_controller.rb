@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_profile, only: [:show, :edit, :update]
+  before_action :set_countries, except: [:show]
   
   # GET /profiles/1
   # GET /profiles/1.json
@@ -66,4 +67,11 @@ class ProfilesController < ApplicationController
     def profile_params
       params.require(:profile).permit(:name, :bio, :country_id, :interests)
     end
+    
+    
+    #MARIAH: 
+    def set_countries
+      @countries = Country.all
+    end
 end
+
