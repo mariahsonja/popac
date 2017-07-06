@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :interests
   #MARIAH
   root to: "profiles#show"
   
@@ -6,9 +7,6 @@ Rails.application.routes.draw do
   devise_for :admins
   devise_for :users
   
-  
-  get 'site/about'
-  get 'site/contact'
   
   #MARIAH
   get '/about' => 'site#about'
