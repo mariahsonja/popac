@@ -25,10 +25,24 @@
     <%= form.label :country_id %>
     <%= form.collection_select :country_id, @countries, :id, :name %>
   </div>
+  
+  <div class="field">
+    <%= form.label :country_id %>
+    <%= form.collection_select :country_id, @countries, :id, :name %>
+  </div>
+
 
   <div class="field">
     <%= form.label :interests %>
     <%= form.text_field :interests, id: :profile_interests %>
+    
+    <select multiple data-role="tagsinput">
+  <option value="Amsterdam">Amsterdam</option>
+  <option value="Washington">Washington</option>
+  <option value="Sydney">Sydney</option>
+  <option value="Beijing">Beijing</option>
+  <option value="Cairo">Cairo</option>
+</select>
   </div>
 
   <div class="actions">
