@@ -7,7 +7,6 @@ class AddCountryIdToProfile < ActiveRecord::Migration[5.1]
   def down
     change_column :profiles, :country_id, :string 
     rename_column :profiles, :country_id, :country
-    
   end
   
 end
