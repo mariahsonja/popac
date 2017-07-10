@@ -25,26 +25,22 @@
     <%= form.label :country_id %>
     <%= form.collection_select :country_id, @countries, :id, :name %>
   </div>
-  
-  <div class="field">
-    <%= form.label :country_id %>
-    <%= form.collection_select :country_id, @countries, :id, :name %>
-  </div>
-
 
   <div class="field">
-    <%= form_for(@interests) do |f| %>
-    <%= f.fields_for :interests do | pt | %> 
-    <%= pt.label :interests, "Tags" %>
-    <%= pt.collection_select(:interests_id, Interests.all, :id, :name, {include_hidden: false}, {multiple: true} ) %>
+    <%= form_for :interests do |f| %>
+      <%= f.fields_for :interests do | pt | %> 
+        <%= pt.label :interests, "Interests" %>
+        <%= pt.collection_select(:interests_id, Interest.all, :id, :name ) %>
     
-    <select multiple data-role="tagsinput">
-      <option value="Child">Child</option>
-      <option value="Refugees">Refugees</option>
-      <option value="Homeless">Homeless</option>
-      <option value="Education">Education</option>
-      <option value="Art">Art</option>
-    </select>
+        <select multiple data-role="tagsinput">
+          <option value="Child">Child</option>
+          <option value="Refugees">Refugees</option>
+          <option value="Homeless">Homeless</option>
+          <option value="Education">Education</option>
+          <option value="Art">Art</option>
+        </select>
+      <% end %>
+    <% end %>
   </div>
 
   <div class="actions">
