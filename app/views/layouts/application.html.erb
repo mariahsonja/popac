@@ -55,6 +55,17 @@
               <li><%= link_to "Instagram", "/path3"  %></li>
             </ul>
           </div><!--/.well -->
+          <!-- MARIAH: search -->
+          <% if user_signed_in? %>
+          <div class="searchbox">
+            <div class="BoxHeaders"> 
+            <h3>Search</h3>
+            <%= form_tag(profile_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search another user" %>
+            <%= submit_tag "Search" %>
+            <% end%>
+          </div>
+          <% end %>
         </div><!--/span-->
       </div><!--/row-->
 
