@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+<!-- MARIAH: search -->
+<%= form_tag(profiles_path, :method => 'get', id: "search-form") do %>
+  <%= text_field_tag :search, params [:search], placeholder "Search for another user" %>
+  <%= submit_tag "Search" %>
+<% end %>
+
 <h1>Profiles</h1>
 
 <table>

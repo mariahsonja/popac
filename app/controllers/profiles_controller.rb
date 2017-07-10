@@ -5,6 +5,20 @@ class ProfilesController < ApplicationController
   
   # GET /profiles/1
   # GET /profiles/1.json
+  
+  
+  #MARIAH: search
+    def index
+      @profiles = Profile.all
+      if params[:search]
+        @bikes = Profile.search(params[:search]).order("created_at DESC")
+      else
+        @bikes = Profile.all.order("created_at DESC")
+      end
+    end
+  
+  
+  
   def show
     if @profile.nil? 
     redirect_to new_profile_path
