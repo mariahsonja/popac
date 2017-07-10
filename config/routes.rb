@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ngos
   resources :interests
   #MARIAH
   root to: "profiles#show"
