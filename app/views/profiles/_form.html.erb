@@ -33,16 +33,18 @@
 
 
   <div class="field">
-    <%= form.label :interests %>
-    <%= form.text_field :interests, id: :profile_interests %>
+    <%= form_for(@interests) do |f| %>
+    <%= f.fields_for :interests do | pt | %> 
+    <%= pt.label :interests, "Tags" %>
+    <%= pt.collection_select(:interests_id, Interests.all, :id, :name, {include_hidden: false}, {multiple: true} ) %>
     
     <select multiple data-role="tagsinput">
-  <option value="Amsterdam">Amsterdam</option>
-  <option value="Washington">Washington</option>
-  <option value="Sydney">Sydney</option>
-  <option value="Beijing">Beijing</option>
-  <option value="Cairo">Cairo</option>
-</select>
+      <option value="Child">Child</option>
+      <option value="Refugees">Refugees</option>
+      <option value="Homeless">Homeless</option>
+      <option value="Education">Education</option>
+      <option value="Art">Art</option>
+    </select>
   </div>
 
   <div class="actions">
