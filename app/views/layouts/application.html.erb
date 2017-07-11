@@ -47,12 +47,16 @@
         </div>
         <div class="col-lg-3">
           <div class="well sidebar-nav">
-            <h3>Follow us</h3>
+            <h4>Follow us</h4>
             <ul class="nav nav-list">
               <li class="nav-header"></li>
-              <li><%= link_to "Facebook", "/path1"  %></li>
-              <li><%= link_to "Twitter", "/path2"  %></li>
-              <li><%= link_to "Instagram", "/path3"  %></li>
+              <!-- MARIAH: Add icon library. Reference: https://www.w3schools.com/howto/howto_css_social_media_buttons.asp -->
+              <li><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></li>
+              <!--MARIAH: Add font awesome icons -->
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-youtube"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-instagram"></a>
             </ul>
           </div><!--/.well -->
           <!-- MARIAH: search -->
@@ -68,7 +72,7 @@
           <% end %>
         </div><!--/span-->
       </div><!--/row-->
-
+     
       <footer>
         <p>&copy; PoPac NGOs 2017</p>
       </footer>
