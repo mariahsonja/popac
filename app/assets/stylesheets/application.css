@@ -16,11 +16,19 @@
  
  
 .col-lg-9{
-    background: white;
+    background: transparent;
     border:transparent;
     border-radius: 50%;
     
 }
+
+p{
+    background: transparent;
+    border:transparent;
+    border-radius: 50%;  
+    color: white;
+}
+
 
 .navbar navbar-default navbar-static-top{
     background-color: white;
@@ -51,27 +59,36 @@ ul{
     border-radius: 50%;
 }
 
-.nav-header{
+
+
+li{
+    background: white;
+    border:transparent;
+    border-radius: 50%;
+}
+
+.nav nav-list{
     background: white;
     border:transparent;
     border-radius: 50%;
 }
 /* Icones*/
-.well sidebar-nav{
+
+
+
+searchbox{
     background: white;
     border:transparent;
     border-radius: 50%;
 }
 
-
-
-
-h4{
+BoxHeaders{
     background: white;
     border:transparent;
-    border-radius: 50%;
+    border-radius: 50%;  
 }
- body {
+
+body {
 background: url("/assets/background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;

@@ -9,7 +9,7 @@
 
     <%= stylesheet_link_tag "application", :media => "all" %>
 
-    <!--%= javascript_include_tag "application" %-->
+    <%= javascript_include_tag "application" %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -29,12 +29,17 @@
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to "About", about_path  %></li>
-            </ul>
+          </ul>
           <ul class="nav navbar-nav">  
             <li><%= link_to "Contact", contact_path  %></li>
+          </ul>
             <% if user_signed_in? %>
+            <ul class="nav navbar-nav">
               <li><%= link_to "Profile", profile_path  %></li>
+            </ul>
+            <ul class="nav navbar-nav">
               <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
+            </ul>
             <% end %>
            </ul>
         </div>
@@ -49,7 +54,7 @@
         </div>
         <div class="col-lg-3">
           <div class="well sidebar-nav">
-            <h4>Follow us</h4>
+            <h4><font color="white"Follow us</h4>
             <ul class="nav nav-list">
               <li class="nav-header"></li>
               <!-- MARIAH: Add icon library. Reference: https://www.w3schools.com/howto/howto_css_social_media_buttons.asp -->
@@ -65,9 +70,9 @@
           <% if user_signed_in? %>
           <div class="searchbox">
             <div class="BoxHeaders"> 
-            <h3>Search</h3>
+            <h3><font color= "white">Search</h3>
             <%= form_tag(profile_path, :method => "get", id: "search-form") do %>
-            <%= text_field_tag :search, params[:search], placeholder: "Search another user" %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search to another user" %>
             <%= submit_tag "Search" %>
             <% end%>
           </div>

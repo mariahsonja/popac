@@ -12,12 +12,17 @@
 
 <p>
   <strong>Country:</strong>
-  <%= @profile.country_id %>
+  <%= @profile.country.name %>
 </p>
 
 <p>
   <strong>Interests:</strong>
-  <%= @profile.interests %>
+  <ul>
+    <% @profile.interests.each do |interest| %>
+      <li><%= interest.name %></li>
+    <%  end%>
+  </ul>
+  
 </p>
 
 

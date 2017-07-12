@@ -27,20 +27,9 @@
   </div>
 
   <div class="field">
-    <%= form_for :interests do |f| %>
-      <%= f.fields_for :interests do | pt | %> 
-        <%= pt.label :interests, "Interests" %>
-        <%= pt.collection_select(:interests_id, Interest.all, :id, :name ) %>
     
-        <select multiple data-role="tagsinput">
-          <option value="Child">Child</option>
-          <option value="Refugees">Refugees</option>
-          <option value="Homeless">Homeless</option>
-          <option value="Education">Education</option>
-          <option value="Art">Art</option>
-        </select>
-      <% end %>
-    <% end %>
+    <%= form.collection_check_boxes(:interest_ids,  Interest.all, :id, :name) %>
+ 
   </div>
 
   <div class="actions">
