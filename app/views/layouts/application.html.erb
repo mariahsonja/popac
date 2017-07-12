@@ -35,11 +35,15 @@
           </ul>
             <% if user_signed_in? %>
             <ul class="nav navbar-nav">
+              <li><%= link_to "Search", profile_path  %></li>
+            </ul>
+            <ul class="nav navbar-nav">
               <li><%= link_to "Profile", profile_path  %></li>
             </ul>
             <ul class="nav navbar-nav">
               <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
             </ul>
+            <%= render partial: 'search/form' %>
             <% end %>
            </ul>
         </div>
@@ -66,17 +70,7 @@
               <a href="https://www.instagram.com/" class="fa fa-instagram"><img alt="instagram" src="/assets/images/instagram.png"></a>
             </ul>
           </div><!--/.well -->
-          <!-- MARIAH: search -->
-          <% if user_signed_in? %>
-          <div class="searchbox">
-            <div class="BoxHeaders"> 
-            <h3><font color= "white">Search</h3>
-            <%= form_tag(profile_path, :method => "get", id: "search-form") do %>
-            <%= text_field_tag :search, params[:search], placeholder: "Search to another user" %>
-            <%= submit_tag "Search" %>
-            <% end%>
-          </div>
-          <% end %>
+      
         </div><!--/span-->
       </div><!--/row-->
      <br>

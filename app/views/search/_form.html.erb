@@ -1,0 +1,11 @@
+<!-- MARIAH: search -->
+
+  <div class="searchbox">
+    <div class="BoxHeaders"> 
+    <h3><font color= "white">Search</h3>
+    <%= form_tag(search_path, method: "get", id: "search-form") do %>
+    <%= select_tag "country_ids", options_from_collection_for_select(Country.all, "id", "name"), multiple: true %>
+    <%= select_tag "interest_ids", options_from_collection_for_select(Interest.all, "id", "name"), multiple: true %>
+    <%= submit_tag "Search" %>
+    <% end%>
+  </div>

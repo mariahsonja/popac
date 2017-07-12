@@ -10,7 +10,10 @@ class Profile < ApplicationRecord
   validates :interests, presence: true
   
   #MARIAH: serach  
-   def self.search(search)
-      where("title LIKE ?", "%#{search}%")
-   end
+  def self.search(params)
+    results = joins(:interests)
+    results = results.where(country_id: params[:country_ids]) if params[:country_ids].present?
+    results = results.where(interests: { id: params[:interest_ids] } ) if params[:interest_ids].present?
+    results
+  end
 end

@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   root to: "profiles#show"
   
   resource :profile
+  
+  get :search, to: 'search#index'
+  
   devise_for :admins
   devise_for :users
   
