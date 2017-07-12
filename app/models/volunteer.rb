@@ -1,0 +1,2 @@
+class Volunteer < Profile
+end
