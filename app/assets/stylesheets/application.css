@@ -13,6 +13,73 @@
  *= require_tree .
  *= require_self
  */
+ 
+ 
+.col-lg-9{
+    background: white;
+    border:transparent;
+    border-radius: 50%;
+    
+}
+
+.navbar navbar-default navbar-static-top{
+    background-color: white;
+    border-radius: 20%;
+}
+
+.navbar-brand{
+    background: white;
+    border:transparent;
+    border-radius: 50%;
+}
+
+.navbar-collapse collapse navbar-responsive-collapse{
+    background: white;
+    border:transparent;
+    border-radius: 20%; 
+}
+
+ul{
+    background: white;
+    border:transparent;
+    border-radius: 50%;
+}
+
+.nav navbar-nav{
+    background: white;
+    border:transparent;
+    border-radius: 50%;
+}
+
+.nav-header{
+    background: white;
+    border:transparent;
+    border-radius: 50%;
+}
+/* Icones*/
+.well sidebar-nav{
+    background: white;
+    border:transparent;
+    border-radius: 50%;
+}
+
+
+
+
+h4{
+    background: white;
+    border:transparent;
+    border-radius: 50%;
+}
+ body {
+background: url("/assets/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+ 
 /* Style all font awesome icons */
 .fa {
     padding: 10px;
@@ -32,25 +99,25 @@
 
 /* Facebook */
 .fa-facebook {
-    background: #3B5998;
-    color: white;
+    background: url("/assets/facebook.png") no-repeat center center fixed;
+    /*color: white;*/
 }
 
 /* Twitter */
 .fa-twitter {
-    background: #55ACEE;
-    color: white;
+    background: url("/assets/facebook.png") no-repeat center center fixed;
+    /*color: white;*/
 }
 
 
 /* Twitter */
-.fa-instagram {
+/*.fa-instagram {
     background: #FF1493;
     color: white;
-}
+}*/
 
 /* Twitter */
-.fa-youtube {
+/*.fa-youtube {
     background: #FF0000;
     color: white;
-}
+}*/

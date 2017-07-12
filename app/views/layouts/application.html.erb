@@ -9,7 +9,7 @@
 
     <%= stylesheet_link_tag "application", :media => "all" %>
 
-    <%= javascript_include_tag "application" %>
+    <!--%= javascript_include_tag "application" %-->
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -18,7 +18,7 @@
     <!--<img height= "75" width:"75" src="/assets/background.png" alt= "background">-->
   </head>
   <body>
-    <div class="navbar navbar-default navbar-static-top">
+    <div><!--class="navbar navbar-default navbar-static-top"-->
       <div class="container">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
           <span class="icon-bar"></span>
@@ -29,6 +29,8 @@
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
             <li><%= link_to "About", about_path  %></li>
+            </ul>
+          <ul class="nav navbar-nav">  
             <li><%= link_to "Contact", contact_path  %></li>
             <% if user_signed_in? %>
               <li><%= link_to "Profile", profile_path  %></li>
@@ -53,10 +55,10 @@
               <!-- MARIAH: Add icon library. Reference: https://www.w3schools.com/howto/howto_css_social_media_buttons.asp -->
               <li><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></li>
               <!--MARIAH: Add font awesome icons -->
-              <a href="#" class="fa fa-facebook"></a>
-              <a href="#" class="fa fa-youtube"></a>
-              <a href="#" class="fa fa-twitter"></a>
-              <a href="#" class="fa fa-instagram"></a>
+              <a href="https://www.facebook.com/" class="fa fa-facebook"><img alt="facebook" src="/assets/images/facebook.png"></a>
+              <a href="https://www.youtube.com/" class="fa fa-youtube"><img alt="youtube" src="/assets/images/youtube.png"></a>
+              <a href="https://twitter.com/?lang=en" class="fa fa-twitter"><img alt="twitter" src="/assets/images/twitter.png"></a>
+              <a href="https://www.instagram.com/" class="fa fa-instagram"><img alt="instagram" src="/assets/images/instagram.png"></a>
             </ul>
           </div><!--/.well -->
           <!-- MARIAH: search -->
@@ -84,7 +86,7 @@
      <br>
      <br>
       <footer>
-        <p>&copy; PoPac NGOs 2017</p>
+        <p><font color= "white">&copy; PoPac NGOs 2017</p>
       </footer>
 
     </div> <!-- /container -->
