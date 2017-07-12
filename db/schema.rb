@@ -59,14 +59,6 @@ ActiveRecord::Schema.define(version: 20170712181328) do
     t.index ["sender_id"], name: "index_messages_on_sender_id"
   end
 
-  create_table "ngos", force: :cascade do |t|
-    t.string "name"
-    t.text "bio"
-    t.string "image_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "profiles", force: :cascade do |t|
     t.string "name"
     t.text "bio"
@@ -96,5 +88,7 @@ ActiveRecord::Schema.define(version: 20170712181328) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "messages", "users", column: "receiver_id"
+  add_foreign_key "messages", "users", column: "sender_id"
   add_foreign_key "profiles", "users"
 end
