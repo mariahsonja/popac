@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= form.label :country_id %>
-    <%= form.collection_select :country_id, @countries, :id, :name %>
+    <%= form.collection_select :country_id, @countries, :id, :name, include_blank: true %>
   </div>
 
   <div class="field">
