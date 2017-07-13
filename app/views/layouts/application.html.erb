@@ -1,67 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  	<!-- Meta, title, CSS, favicons, etc. -->
-  	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	<meta name="description" content="PoPac">
-  	<meta name="author" content="Mariah Sonja">
-  	<title>PoPac</title>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PoPac">
+    <meta name="author" content="Mariah Sonja">
+    <title>PoPac</title>
 
-  	<%= csrf_meta_tags %>
+    <%= csrf_meta_tags %>
   
-  	<!-- Styles -->
-  	<%= stylesheet_link_tag "application", media: "all" %>
+    <!-- Styles -->
+    <%= stylesheet_link_tag "application", media: "all" %>
   
-  	<!-- Fonts -->
-  	<link href='http://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
   
-  	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  	<!--[if lt IE 9]>
-  		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  		  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-  	<![endif]-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
   
-  	<!-- Favicon -->
-  	<link rel="shortcut icon" href="#">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="#">
   </head>
   <body>
     <!-- Begin Hero Bg -->
     <div id="parallax"></div>
     <!-- End Hero Bg -->
-  	
-  	<!-- ================================================== -->
+    
+    <!-- ================================================== -->
     <!-- Start Header -->
-  	<!-- ================================================== -->
+    <!-- ================================================== -->
     <header id="header" class="navbar navbar-inverse navbar-fixed-top" role="banner">
       <div class="container">
-  	    <div class="navbar-header">
-  		    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-  		      <span class="sr-only">Toggle navigation</span>
-  		      <span class="icon-bar"></span>
-  		      <span class="icon-bar"></span>
-  		      <span class="icon-bar"></span>
-  		    </button>
-  		    
-  		    <!-- Your Logo -->
-  		    <a href="#hero">
-  		      <%= image_tag "logo.png", width: "103", height: "80" %>
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+          <!-- Your Logo -->
+          <a href="#hero">
+            <%= image_tag "logo.png", width: "103", height: "80" %>
           </a>
-  	    </div>
-  	  
-  	    <!-- Start Navigation -->
-  	    <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
-  	      <ul class="nav navbar-nav">
-  		      <li><a href="<%= root_path(anchor: 'hero') %>">Home</a></li>
-  		      <li><a href="<%= root_path(anchor: 'about') %>">About</a></li>
-  		      <li><a href="<%= root_path(anchor: 'faq') %>">FAQ</a></li>
-  		      <li><a href="<%= root_path(anchor: 'contactarea') %>">Contact</a></li>
-  		      <% if current_user %>
+        </div>
+      
+        <!-- Start Navigation -->
+        <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+          <ul class="nav navbar-nav">
+            <li><a href="<%= root_path(anchor: 'hero') %>">Home</a></li>
+            <li><a href="<%= root_path(anchor: 'about') %>">About</a></li>
+            <li><a href="<%= root_path(anchor: 'faq') %>">FAQ</a></li>
+            <li><a href="<%= root_path(anchor: 'contactarea') %>">Contact</a></li>
+            <% if current_user %>
               <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
-  		      <% else %>
-		          <li><a href="<%= new_user_registration_path  %>">Sign up</a></li>
-		        <% end %>
-  	      </ul>
+            <% else %>
+              <li><a href="<%= new_user_registration_path  %>">Sign up</a></li>
+            <% end %>
+          </ul>
         </nav>
       </div>
     </header>
@@ -75,21 +75,21 @@
     <!-- Credits -->
     <!-- ================================================== -->
     <section id="credits" class="text-center">
-    	<span class="social wow zoomIn">
-    	<a href="#"><i class="fa fa-facebook"></i></a>
-    	<a href="#"><i class="fa fa-twitter"></i></a>
-    	<a href="#"><i class="fa fa-skype"></i></a>
-    	<a href="#"><i class="fa fa-linkedin"></i></a>
-    	<a href="#"><i class="fa fa-pinterest"></i></a>
-    	<a href="#"><i class="fa fa-google-plus"></i></a>
-    	</span><br/>
-    	Copyright &copy; <a href="#">Your Agency</a>
-    	<br/>Template By <i class="fa fa-heart"></i> WowThemes.Net
+      <span class="social wow zoomIn">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-skype"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-pinterest"></i></a>
+      <a href="#"><i class="fa fa-google-plus"></i></a>
+      </span><br/>
+      Copyright &copy; <a href="#">PoPac</a>
+      <br/>Template By <i class="fa fa-heart"></i> WowThemes.Net
     </section>
     
     <!-- ================================================== -->
     <!-- Bootstrap core JavaScript -->
-  	<!-- ================================================== -->
+    <!-- ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <%= javascript_include_tag "application" %>
   </body>
