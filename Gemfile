@@ -37,10 +37,6 @@ gem 'turbolinks', '~> 5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-#MARIAH: Twitter bootstrap for layout (frontend) 
-#Referencee: https://github.com/seyhunak/twitter-bootstrap-rails
-gem "twitter-bootstrap-rails"
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
