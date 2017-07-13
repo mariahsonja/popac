@@ -12,4 +12,11 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require_tree .
+//= require vendor/jquery.min.js
+//= require vendor/bootstrap.min.js
+//= require vendor/waypoints.min.js
+//= require vendor/jquery.scrollTo.min.js
+//= require vendor/jquery.localScroll.min.js
+//= require vendor/jquery.magnific-popup.min.js
+//= require vendor/validate.js
+//= require vendor/common.js

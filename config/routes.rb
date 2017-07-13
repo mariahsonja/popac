@@ -1,16 +1,12 @@
 Rails.application.routes.draw do
   devise_for :admins
   devise_for :users
-  
+
   # MARIAH
-  root to: "profiles#show"
-  
+  root to: "site#home"
+
   resources :interests
   resource :profile
-  
-  get :search, to: 'search#index'
 
-  #MARIAH
-  get '/about', to: 'site#about'
-  get '/contact', to: 'site#contact'
+  get :search, to: 'search#index'
 end
