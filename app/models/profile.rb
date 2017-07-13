@@ -2,14 +2,15 @@ class Profile < ApplicationRecord
   belongs_to :user
   belongs_to :country 
   has_and_belongs_to_many :interests 
-  #MARIAH
+  
+  # MARIAH
   accepts_nested_attributes_for :interests
   
   validates :name, presence: true
   validates :bio, presence: true
   validates :interests, presence: true
   
-  #MARIAH: serach  
+  # MARIAH: search  
   def self.search(params)
     results = joins(:interests)
     results = results.where(country_id: params[:country_ids]) if params[:country_ids].present?
