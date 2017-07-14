@@ -15,9 +15,9 @@ Project: PoPac NGOs
  
 * Distributed Version-Control Platform: GitHub
 
-* Database: PostgreSql
+* Database: PostgreSQL
 
-* FrontEnd: Bootstrap | WowThemes.Net |
+* FrontEnd: Twitter Bootstrap | WowThemes.Net |
 
 * Deployment: Heroku 
 

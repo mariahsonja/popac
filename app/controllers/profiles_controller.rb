@@ -15,7 +15,7 @@ class ProfilesController < ApplicationController
 
   def new
     if current_user.profile.present?
-      redirect_to profile_path(current_user.profile), notice: "You already have created a profile."
+      redirect_to profile_path(current_user.profile), notice: "You have already created a profile."
     else
       @profile = current_user.build_profile  
     end
