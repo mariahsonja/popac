@@ -5,7 +5,7 @@ Higher Diploma in Science in Computing - Cloud
 Student: MARIAH SONJA PEREIRA PENHA|16104978|
 Lecturer: Eugene McLaughlin
 
-Project: POAPAC NGOs
+Project: PoPac NGOs
 
 * Programming Language: Ruby - version 5.1.2
  
