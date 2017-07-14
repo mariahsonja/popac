@@ -6,5 +6,9 @@ Rails.application.routes.draw do
   root to: "site#home"
 
   resources :interests
-  resources :profiles
+  resources :profiles do
+    resources :conversations, except: [:edit, :update] do
+      resources :messages
+    end
+  end
 end

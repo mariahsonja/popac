@@ -58,7 +58,7 @@
             <% if current_user %>
               <% if current_user.profile && current_user.profile.persisted? %>
                 <li><a href="<%= profile_path(current_user.profile)  %>">My profile</a></li>
-                <li><a href="<%= profile_path(current_user.profile)  %>">Messages</a></li>
+                <li><a href="<%= profile_conversations_path(current_user.profile)  %>">Messages</a></li>
               <% else %>
                 <li><a href="<%= new_profile_path %>">Create your profile</a></li>
               <% end %>
