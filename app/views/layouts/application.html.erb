@@ -43,7 +43,7 @@
           </button>
           
           <!-- Your Logo -->
-          <a href="#hero">
+          <a href="<%= root_path %>">
             <%= image_tag "logoP.png", width: "103", height: "80" %>
           </a>
         </div>
@@ -58,7 +58,8 @@
             <% if current_user %>
               <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
             <% else %>
-              <li><a href="<%= new_user_registration_path  %>">Sign up</a></li>
+              <li><a class="signin" href="<%= new_user_session_path  %>">Sign in</a></li>
+              <li><a class="signup" href="<%= new_user_registration_path  %>">Create account</a></li>
             <% end %>
           </ul>
         </nav>
@@ -73,16 +74,17 @@
     <!-- ================================================== -->
     <!-- Credits -->
     <!-- ================================================== -->
-    <section id="credits" class="text-center">
+    <section id="credits" class="text-center clearfix">
       <span class="social wow zoomIn">
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-skype"></i></a>
-      <a href="#"><i class="fa fa-linkedin"></i></a>
-      <a href="#"><i class="fa fa-pinterest"></i></a>
-      <a href="#"><i class="fa fa-google-plus"></i></a>
-      </span><br/>
-      <a href="#">PoPac 2017</a> &copy; All rights reserved
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-skype"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-pinterest"></i></a>
+        <a href="#"><i class="fa fa-google-plus"></i></a>
+      </span>
+      <br/>
+      <a href="<= root_path %>">PoPac <%= Date.current.year %></a> &copy; All rights reserved
       <br/>Mariah Sonja <i class="fa fa-heart"></i> 16104978
     </section>
   </body>

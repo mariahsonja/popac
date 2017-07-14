@@ -16,3 +16,8 @@
  *= require vendor/style
  *= require_self
  */
+ 
+.content {
+    margin-top: 80px;
+    background: red;
+}
