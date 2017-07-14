@@ -1,41 +1,33 @@
-<p id="notice"><%= notice %></p>
-
-<!-- MARIAH: search -->
-<%= form_tag(profiles_path, :method => 'get', id: "search-form") do %>
-  <%= text_field_tag :search, params [:search], placeholder "Search for another user" %>
-  <%= submit_tag "Search" %>
-<% end %>
-
-<h1>Profiles</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Bio</th>
-      <th>Country</th>
-      <th>Interests</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @profiles.each do |profile| %>
+<div class="content container">
+  <%= render partial: "profiles/search" %>
+  
+  <p id="notice"><%= notice %></p>
+  
+  <h1>Profiles</h1>
+  
+  <table>
+    <thead>
       <tr>
-        <td><%= profile.name %></td>
-        <td><%= profile.bio %></td>
-        <td><%= profile.country %></td>
-        <td><%= profile.interests %></td>
-        <td><%= profile.user %></td>
-        <td><%= link_to 'Show', profile %></td>
-        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Bio</th>
+        <th>Country</th>
+        <th>Interests</th>
+        <th>User</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Profile', new_profile_path %>
+    </thead>
+  
+    <tbody>
+      <% @profiles.each do |profile| %>
+        <tr>
+          <td><%= profile.name %></td>
+          <td><%= profile.user.email %></td>
+          <td><%= profile.bio %></td>
+          <td><%= profile.country.name %></td>
+          <td><%= profile.interests.pluck(:name).to_sentence %></td>
+          <td><%= link_to 'Show', profile %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
