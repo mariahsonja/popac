@@ -13,11 +13,11 @@ Project: PoPac NGOs
 
 * Development Platform: Cloud9
  
-* Distributed version-control platform: GitHub
+* Distributed Version-Control Platform: GitHub
 
 * Database: PostgreSql
 
-* FrontEnd: Bootstrap |css| WowThemes.Net |html|
+* FrontEnd: Bootstrap | WowThemes.Net |
 
 * Deployment: Heroku 
 
