@@ -1,25 +1,24 @@
-# README
+# README 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+National College Of Ireland - 2016/2017
+Higher Diploma in Science in Computing - Cloud
+Student: MARIAH SONJA PEREIRA PENHA|16104978|
+Lecturer: Eugene McLaughlin
 
-Things you may want to cover:
+Project: POAPAC NGOs
 
-* Ruby version
+* Programming Language: Ruby - version 5.1.2
+ 
+* Framework: Rails
 
-* System dependencies
+* Development Platform: Cloud9
+ 
+* Distributed version-control platform: GitHub
 
-* Configuration
+* Database: PostgreSql
 
-* Database creation
+* FrontEnd: Bootstrap |css| WowThemes.Net |html|
 
-* Database initialization
+* Deployment: Heroku 
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# popac
+* Link: ___________________ 
