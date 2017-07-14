@@ -56,8 +56,8 @@
             <li><a href="<%= root_path(anchor: 'faq') %>">FAQ</a></li>
             <li><a href="<%= root_path(anchor: 'contactarea') %>">Contact</a></li>
             <% if current_user %>
-              <li><a href="<%= profile_path  %>">My profile</a></li>
-              <li><a href="<%= profile_path  %>">Messages</a></li>
+              <li><a href="<%= profile_path(current_user.profile)  %>">My profile</a></li>
+              <li><a href="<%= profile_path(current_user.profile)  %>">Messages</a></li>
               <li><%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'signout' %></li>
             <% else %>
               <li><a class="signin" href="<%= new_user_session_path  %>">Sign in</a></li>

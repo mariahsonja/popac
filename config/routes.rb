@@ -6,7 +6,5 @@ Rails.application.routes.draw do
   root to: "site#home"
 
   resources :interests
-  resource :profile
-
-  get :search, to: 'search#index'
+  resources :profiles
 end

@@ -1,4 +1,4 @@
-<%= form_with(model: profile, url: profile_path, local: true) do |form| %>
+<%= form_with(model: profile, local: true) do |form| %>
   <% if profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
@@ -28,7 +28,7 @@
 
   <div class="field">
     
-    <%= form.collection_check_boxes(:interest_ids,  Interest.all, :id, :name) %>
+    <%= form.collection_check_boxes(:interest_ids,  @interests, :id, :name) %>
  
   </div>
 
