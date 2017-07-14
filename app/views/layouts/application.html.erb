@@ -47,7 +47,7 @@
             <%= image_tag "logoP.png", width: "103", height: "80" %>
           </a>
         </div>
-      
+
         <!-- Start Navigation -->
         <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
           <ul class="nav navbar-nav">
@@ -56,7 +56,9 @@
             <li><a href="<%= root_path(anchor: 'faq') %>">FAQ</a></li>
             <li><a href="<%= root_path(anchor: 'contactarea') %>">Contact</a></li>
             <% if current_user %>
-              <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+              <li><a href="<%= profile_path  %>">My profile</a></li>
+              <li><a href="<%= profile_path  %>">Messages</a></li>
+              <li><%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'signout' %></li>
             <% else %>
               <li><a class="signin" href="<%= new_user_session_path  %>">Sign in</a></li>
               <li><a class="signup" href="<%= new_user_registration_path  %>">Create account</a></li>
@@ -65,7 +67,7 @@
         </nav>
       </div>
     </header>
-    
+
     <!-- ================================================== -->
     <!-- Content -->
     <!-- ================================================== -->
@@ -74,7 +76,7 @@
     <!-- ================================================== -->
     <!-- Credits -->
     <!-- ================================================== -->
-    <section id="credits" class="text-center clearfix">
+    <section id="credits" class="text-center">
       <span class="social wow zoomIn">
         <a href="#"><i class="fa fa-facebook"></i></a>
         <a href="#"><i class="fa fa-twitter"></i></a>
