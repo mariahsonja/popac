@@ -1,7 +1,8 @@
 <!-- MARIAH: search -->
 
   <div class="searchbox">
-    <h3><font color= "white">Search</h3>
+    </br>
+    <h3><font color= "black">Search</h3>
     <%= form_tag(profiles_path, method: "get", id: "search-form") do %>
     <%= select_tag "country_ids", options_from_collection_for_select(Country.all, "id", "name"), multiple: true %>
     <%= select_tag "interest_ids", options_from_collection_for_select(Interest.all, "id", "name"), multiple: true %>
