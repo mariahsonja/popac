@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170716225534) do
+ActiveRecord::Schema.define(version: 20170716230705) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,10 +33,15 @@ ActiveRecord::Schema.define(version: 20170716225534) do
   end
 
   create_table "conversations", force: :cascade do |t|
-    t.bigint "profile_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["profile_id"], name: "index_conversations_on_profile_id"
+  end
+
+  create_table "conversations_profiles", force: :cascade do |t|
+    t.bigint "conversation_id"
+    t.bigint "profile_id"
+    t.index ["conversation_id"], name: "index_conversations_profiles_on_conversation_id"
+    t.index ["profile_id"], name: "index_conversations_profiles_on_profile_id"
   end
 
   create_table "countries", force: :cascade do |t|
@@ -95,7 +100,6 @@ ActiveRecord::Schema.define(version: 20170716225534) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "conversations", "profiles"
   add_foreign_key "messages", "conversations"
   add_foreign_key "messages", "users", column: "sender_id"
   add_foreign_key "profiles", "users"
