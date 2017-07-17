@@ -10,4 +10,12 @@ class ApplicationController < ActionController::Base
     return if current_user.profile
     redirect_to new_profile_path, notice: "You must create your profile to continue."
   end
+  
+  def after_sign_in_path_for(resource)
+    if resource.profile.present?
+      profile_path(resource.profile)
+    else
+      new_profile_path
+    end
+  end
 end
