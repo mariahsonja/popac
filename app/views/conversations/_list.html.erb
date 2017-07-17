@@ -1,7 +1,7 @@
 <div class="col-md-3">
   <dl>
     <% conversations.each do |conversation| %>
-      <a href="<%= profile_conversation_path(@profile, conversation) %>" class="<%= cycle("odd", "even") %> <%= conversation&.id == selected ? "selected" : "" %>">
+      <a href="<%= profile_conversation_path(@profile, conversation) %>" class="<%= cycle("odd", "even") %> <%= conversation.id.to_s == params[:id] ? "selected" : "" %>">
         <dt><%= conversation.header %></dt>
         <dd><%= conversation.messages.first.content %></dd>
       </a>
