@@ -1,0 +1,14 @@
+<div class="content container">
+  <div class="row">
+    <%= render partial: 'list', locals: { conversations: @conversations, selected: @conversation.id } %>
+
+    <div class="col-md-9">
+      <dl>
+        <% @conversation.messages.each do |message| %>
+          <dt><%= message.sender == current_user.profile ? "You" : message.sender.name %></dt>
+          <dd class="<%= "me" if message.sender_id = current_user.profile.id %>"><%= message.content %></dd>
+        <% end %>
+      </dl>
+    </div>
+  </div>
+</div>

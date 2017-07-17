@@ -1,10 +1,12 @@
 class ConversationsController < ApplicationController
+  before_action :load_profile
   before_action :load_conversations
   
   def index
   end
 
   def show
+    @conversation = @conversations.find(params[:id])
   end
   
   def new
@@ -13,12 +15,13 @@ class ConversationsController < ApplicationController
   def create
   end
   
-  def destroy
-  end
-  
   private
   
+  def load_profile
+    @profile = current_user.profile
+  end
+  
   def load_conversations
-    @conversations = current_user.profile.conversations
+    @conversations = @profile.conversations
   end
 end

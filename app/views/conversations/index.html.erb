@@ -1,12 +1,6 @@
 <div class="content container">
   <div class="row">
-    <div class="col-md-3">
-      <ul>
-        <% @conversations.each do |conversation| %>
-          <li><%= conversation.updated_at %></li>
-        <% end %>
-      </ul>
-    </div>
+    <%= render partial: 'list', locals: { conversations: @conversations } %>
 
     <div class="col-md-9">
       chat window

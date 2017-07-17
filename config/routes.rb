@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :interests
   resources :profiles do
-    resources :conversations, except: [:edit, :update] do
+    resources :conversations, except: [:edit, :update, :destroy] do
       resources :messages
     end
   end
