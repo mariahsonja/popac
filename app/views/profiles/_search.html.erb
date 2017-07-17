@@ -1,11 +1,7 @@
-<!-- MARIAH: search -->
-
-  <div class="searchbox">
-    </br>
-    <h3><font color= "black">Search</h3>
-    <%= form_tag(profiles_path, method: "get", id: "search-form") do %>
-    <%= select_tag "country_ids", options_from_collection_for_select(Country.all, "id", "name"), multiple: true %>
-    <%= select_tag "interest_ids", options_from_collection_for_select(Interest.all, "id", "name"), multiple: true %>
+<div class="row">
+  <%= form_tag(profiles_path, method: "get", id: "search-form") do %>
+    <%= select_tag "interest_ids", options_for_select([]), multiple: true, data: { tags: "interests", source: data_source(Interest), selected: params[:interest_ids] }, placeholder: "I'm interested in..." %>
+    <%= select_tag "country_ids",  options_for_select([]), multiple: true, data: { tags: "countries", source: data_source(Country),  selected: params[:country_ids]  }, placeholder: "somewhere" %>
     <%= submit_tag "Search" %>
-    <% end%>
-  </div>
+  <% end%>
+</div>

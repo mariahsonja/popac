@@ -12,11 +12,45 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require vendor/jquery.min.js
-//= require vendor/bootstrap.min.js
-//= require vendor/waypoints.min.js
-//= require vendor/jquery.scrollTo.min.js
-//= require vendor/jquery.localScroll.min.js
-//= require vendor/jquery.magnific-popup.min.js
-//= require vendor/validate.js
-//= require vendor/common.js
+//= require vendor/jquery.min
+//= require vendor/bootstrap.min
+//= require vendor/waypoints.min
+//= require vendor/jquery.scrollTo.min
+//= require vendor/jquery.localScroll.min
+//= require vendor/jquery.magnific-popup.min
+//= require vendor/validate
+//= require vendor/common
+//= require vendor/typeahead.bundle
+//= require vendor/bootstrap-tagsinput
+//= require_self
+
+$(function() {
+    $('[data-tags]').each(function(idx, element) {
+        var $input   = $(element);
+        var source   = $input.data('source');
+        var selected = $input.data('selected') || [];
+        var dataset  = new Bloodhound({
+            datumTokenizer: Bloodhound.tokenizers.obj.whitespace('text'),
+            queryTokenizer: Bloodhound.tokenizers.whitespace,
+            local: source
+        });
+
+        dataset.initialize();
+
+        $input.tagsinput({
+            itemValue: 'value',
+            itemText: 'text',
+            typeaheadjs: {
+                name: $input.data('tags'),
+                displayKey: 'text',
+                source: dataset.ttAdapter()
+            }
+        });
+        
+        $.each(source, function(idx, record) {
+            if ( ~$.inArray(record.value, selected) ) {
+                $input.tagsinput('add', record);
+            }
+        })
+    });
+});

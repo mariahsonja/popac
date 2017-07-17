@@ -13,6 +13,8 @@
  *= require vendor/bootstrap.min
  *= require vendor/animate.min
  *= require vendor/font-awesome.min
+ *= require vendor/bootstrap-tagsinput
+ *= require vendor/bootstrap-tagsinput-typeahead
  *= require vendor/style
  *= require_self
  */
@@ -20,4 +22,8 @@
 .content {
     margin-top: 80px;
     background: white;
+}
+
+.bootstrap-tagsinput .tag {
+    background: #3498db;
 }
