@@ -22,6 +22,11 @@ Lecturer: Eugene McLaughlin
 - [Twitter Bootstrap](http://getbootstrap.com/)
 - [WowThemes.Net](https://www.wowthemes.net/run-charity-lite-free-bootstrap-template)
 
+### Tests
+- [RSpec](https://relishapp.com/rspec)
+- [factory_girl](https://github.com/thoughtbot/factory_girl)
+- [DatabaseCleaner](https://github.com/DatabaseCleaner/database_cleaner)
+
 ### Deployment: Heroku 
 - Link: https://popac.herokuapp.com
 
