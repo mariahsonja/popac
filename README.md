@@ -26,6 +26,7 @@ Lecturer: Eugene McLaughlin
 - [RSpec](https://relishapp.com/rspec)
 - [factory_girl](https://github.com/thoughtbot/factory_girl)
 - [DatabaseCleaner](https://github.com/DatabaseCleaner/database_cleaner)
+- [Capybara](https://github.com/teamcapybara/capybara)
 
 ### Deployment: Heroku 
 - Link: https://popac.herokuapp.com
