@@ -13,9 +13,9 @@ class Profile < ApplicationRecord
   
   # MARIAH: search  
   def self.search(params)
-    results = joins(:interests)
+    results = unscoped.distinct
     results = results.where(country_id: params[:country_ids]) if params[:country_ids].present?
-    results = results.where(interests: { id: params[:interest_ids] } ) if params[:interest_ids].present?
+    results = results.joins(:interests).where(interests: { id: params[:interest_ids] } ) if params[:interest_ids].present?
     results
   end
 end
