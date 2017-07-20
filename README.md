@@ -9,14 +9,21 @@ Lecturer: Eugene McLaughlin
 
 ## Project: PoPac NGOs
 
-- Programming Language: Ruby - version 5.1.2
-- Framework: Rails
-- Development Platform: Cloud9
-- Distributed Version-Control Platform: GitHub
-- Database: PostgreSQL
-- FrontEnd: Twitter Bootstrap | WowThemes.Net |
-- Deployment: Heroku 
-- Link: ___________________ 
+### Development
+- Programming Language: [Ruby (2.4.1)](https://www.ruby-lang.org/en/)
+- Framework: [Ruby on Rails (v5.1.2)](http://rubyonrails.org/)
+- Version control: [GitHub](https://github.com/mariahsonja/popac)
+- Development Platform: [Cloud9](https://c9.io)
+
+### Database
+- PostgreSQL
+
+### FrontEnd
+- [Twitter Bootstrap](http://getbootstrap.com/)
+- [WowThemes.Net](https://www.wowthemes.net/run-charity-lite-free-bootstrap-template)
+
+### Deployment: Heroku 
+- Link: https://popac.herokuapp.com
 
 ### References
 
