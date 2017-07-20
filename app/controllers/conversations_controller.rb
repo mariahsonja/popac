@@ -9,10 +9,10 @@ class ConversationsController < ApplicationController
     @conversation = @conversations.find(params[:id])
   end
   
-  def new
-  end
-  
   def create
+    @conversation = @conversations.create
+    @conversation.profiles << Profile.find(params[:profile_id])
+    redirect_to profile_conversation_path(current_user.profile, @conversation)
   end
   
   private

@@ -6,8 +6,8 @@ class ApplicationController < ActionController::Base
   private
   
   def check_if_user_has_profile!
-    return unless current_user
-    return if current_user.profile
+    return if current_user.nil?
+    return if current_user.profile.present?
     redirect_to new_profile_path, notice: "You must create your profile to continue."
   end
   

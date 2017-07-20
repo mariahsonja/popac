@@ -5,4 +5,8 @@ class Conversation < ApplicationRecord
   def header
     profiles.pluck(:name).to_sentence
   end
+  
+  def last_message
+    messages.last&.content
+  end
 end

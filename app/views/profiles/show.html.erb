@@ -30,6 +30,6 @@
   <% if current_user.profile == @profile %>
     <%= link_to 'Edit', edit_profile_path(@profile) %>
   <% else %>
-    <%= link_to 'Start a new conversation', new_profile_conversation_path(@profile) %>
+    <%= link_to 'Start a new conversation', profile_conversations_path(@profile), method: :post %>
   <% end %>
 </div>
