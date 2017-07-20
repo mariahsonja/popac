@@ -1,0 +1,10 @@
+<% if messages.any? %>
+  <dl>
+    <% messages.each do |message| %>
+      <dt><%= message.sender == current_user.profile ? "You" : message.sender.name %></dt>
+      <dd class="<%= "you" if message.sender_id = current_user.profile.id %>"><%= message.content %></dd>
+    <% end %>
+  </dl>
+<% else %>
+  <p>You have no messages on this conversation.</p>
+<% end %>

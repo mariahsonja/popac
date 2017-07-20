@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :interests
   resources :profiles do
     resources :conversations, except: [:edit, :update, :destroy] do
-      resources :messages
+      post :send_message, on: :member
     end
   end
 end

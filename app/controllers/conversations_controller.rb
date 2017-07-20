@@ -15,6 +15,11 @@ class ConversationsController < ApplicationController
     redirect_to profile_conversation_path(current_user.profile, @conversation)
   end
   
+  def send_message
+    @conversation = @conversations.find(params[:id])
+    @conversation.messages.create!(send_message_params)
+  end
+  
   private
   
   def load_profile
@@ -23,5 +28,9 @@ class ConversationsController < ApplicationController
   
   def load_conversations
     @conversations = @profile.conversations
+  end
+  
+  def send_message_params
+    params.require(:message).permit(:content).merge(sender: @profile)
   end
 end
