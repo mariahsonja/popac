@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170716230705) do
+ActiveRecord::Schema.define(version: 20170720201056) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -101,6 +101,6 @@ ActiveRecord::Schema.define(version: 20170716230705) do
   end
 
   add_foreign_key "messages", "conversations"
-  add_foreign_key "messages", "users", column: "sender_id"
+  add_foreign_key "messages", "profiles", column: "sender_id"
   add_foreign_key "profiles", "users"
 end
