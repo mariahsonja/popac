@@ -7,6 +7,11 @@ Student: MARIAH SONJA PEREIRA PENHA|16104978|
 Lecturer: Eugene McLaughlin
 ```
 
+### How to run
+- Start postgresql: `sudo service postgresql start`
+- Start redis: `sudo /etc/init.d/redis-server start`
+- Start rails: `rails server -p $PORT -b $IP`
+
 ### Development
 - Programming Language: [Ruby (2.4.1)](https://www.ruby-lang.org/en/)
 - Framework: [Ruby on Rails (v5.1.2)](http://rubyonrails.org/)
@@ -15,6 +20,7 @@ Lecturer: Eugene McLaughlin
 
 ### Database
 - PostgreSQL
+- Redis
 
 ### FrontEnd
 - [Twitter Bootstrap](http://getbootstrap.com/)
@@ -27,8 +33,8 @@ Lecturer: Eugene McLaughlin
 - [DatabaseCleaner](https://github.com/DatabaseCleaner/database_cleaner)
 - [Capybara](https://github.com/teamcapybara/capybara)
 
-### Deployment: Heroku 
-- Link: https://popac.herokuapp.com
+### Deployment 
+- Heroku: https://popac.herokuapp.com
 
 ### Tools
 - http://svgtopng.com/
