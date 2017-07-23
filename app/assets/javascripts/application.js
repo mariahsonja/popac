@@ -11,7 +11,9 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require turbolinks
 //= require vendor/jquery.min
+//= require cable
 //= require vendor/bootstrap.min
 //= require vendor/waypoints.min
 //= require vendor/jquery.scrollTo.min

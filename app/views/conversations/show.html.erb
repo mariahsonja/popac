@@ -3,14 +3,14 @@
     <%= render partial: 'list', locals: { conversations: @conversations } %>
 
     <div class="col-md-9">
-      <div class="row" id="conversation-list">
+      <div class="row" id="messages" data-conversation-id="<%= @conversation.id %>">
         <%= render partial: 'messages', locals: { messages: @conversation.messages } %>
       </div>
       
       <div class="row">
-        <%= form_with(model: @conversation.messages.build, url: send_message_profile_conversation_path(current_user.profile, @conversation), remote: true) do |f| %>
+        <%= form_with(model: @conversation.messages.build, url: "#", id: "new_message") do |f| %>
           <div class="row">
-            <%= f.text_area :content %>  
+            <%= f.text_area :content, id: "message_content" %>  
           </div>
           <div class="row">
             <%= f.button :send %>

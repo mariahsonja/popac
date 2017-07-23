@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   
+  before_action :set_user_id_cookie
+  
   private
   
   def check_if_user_has_profile!
@@ -17,5 +19,9 @@ class ApplicationController < ActionController::Base
     else
       new_profile_path
     end
+  end
+  
+  def set_user_id_cookie
+    cookies.signed[:user_id] = current_user&.id
   end
 end

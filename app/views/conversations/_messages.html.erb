@@ -1,8 +1,7 @@
 <% if messages.any? %>
   <dl>
     <% messages.each do |message| %>
-      <dt><%= message.sender == current_user.profile ? "You" : message.sender.name %></dt>
-      <dd class="<%= "you" if message.sender_id = current_user.profile.id %>"><%= message.content %></dd>
+      <%= render partial: "message", locals: { message: message } %>
     <% end %>
   </dl>
 <% else %>
