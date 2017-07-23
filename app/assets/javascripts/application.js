@@ -25,7 +25,7 @@
 //= require vendor/bootstrap-tagsinput
 //= require_self
 
-$(function() {
+jQuery(document).on('turbolinks:load', function() {
     $('[data-tags]').each(function(idx, element) {
         var $input   = $(element);
         var source   = $input.data('source');

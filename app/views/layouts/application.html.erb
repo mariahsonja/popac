@@ -51,10 +51,10 @@
         <!-- Start Navigation -->
         <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
           <ul class="nav navbar-nav">
-            <li><a href="<%= root_path(anchor: 'hero') %>">Home</a></li>
-            <li><a href="<%= root_path(anchor: 'about') %>">About</a></li>
-            <li><a href="<%= root_path(anchor: 'faq') %>">FAQ</a></li>
-            <li><a href="<%= root_path(anchor: 'contactarea') %>">Contact</a></li>
+            <li><a data-turbolinks="false" href="<%= root_path(anchor: 'hero') %>">Home</a></li>
+            <li><a data-turbolinks="false" href="<%= root_path(anchor: 'about') %>">About</a></li>
+            <li><a data-turbolinks="false" href="<%= root_path(anchor: 'faq') %>">FAQ</a></li>
+            <li><a data-turbolinks="false" href="<%= root_path(anchor: 'contactarea') %>">Contact</a></li>
             <% if current_user %>
               <% if current_user.profile && current_user.profile.persisted? %>
                 <li><a href="<%= profile_path(current_user.profile)  %>">My profile</a></li>
