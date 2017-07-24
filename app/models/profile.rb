@@ -11,6 +11,8 @@ class Profile < ApplicationRecord
   validates :bio, presence: true
   validates :interests, presence: true
   
+  mount_uploader :picture, ProfilePictureUploader
+  
   # MARIAH: search  
   def self.search(params)
     results = unscoped.distinct

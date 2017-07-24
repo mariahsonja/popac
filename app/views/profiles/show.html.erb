@@ -2,6 +2,12 @@
   <%= render partial: "profiles/search" %>
 
   <p id="notice"><%= notice %></p>
+  
+  <% if @profile.picture_url %>  
+    <p>
+      <%= image_tag(@profile.picture_url(:thumbnail), alt: @profile.name) %>
+    </p>
+  <% end %>
 
   <p>
     <strong>Name:</strong>

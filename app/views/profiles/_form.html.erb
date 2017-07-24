@@ -10,6 +10,11 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="field">
+    <%= form.hidden_field(:picture_cache) %>
+    <%= form.file_field :picture, id: :profile_picture %>
+  </div>
 
   <div class="field">
     <%= form.label :name %>

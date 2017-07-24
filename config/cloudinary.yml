@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: ht6jodhfp
+  api_key: 875225361463577
+  api_secret: X9-whme686zohNPwES0AiwCB8Ug
+  enhance_image_tag: true
+  static_image_support: false
+test:
+  cloud_name: ht6jodhfp
+  api_key: 875225361463577
+  api_secret: X9-whme686zohNPwES0AiwCB8Ug
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: ht6jodhfp
+  api_key: 875225361463577
+  api_secret: X9-whme686zohNPwES0AiwCB8Ug
+  enhance_image_tag: true
+  static_image_support: true

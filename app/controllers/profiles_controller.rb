@@ -1,9 +1,9 @@
 class ProfilesController < ApplicationController
   before_action :authenticate_user!
+  before_action :restrict_profile_access, only: [:edit, :update]
   before_action :check_if_user_has_profile!, except: [:new, :create]
   before_action :load_countries, only: [:new, :edit]
   before_action :load_interests, only: [:new, :edit]
-  before_action :restrict_profile_access, only: [:edit, :update]
 
   def index
     @profiles = Profile.search(search_params)
@@ -49,7 +49,7 @@ class ProfilesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def profile_params
-    params.require(:profile).permit(:name, :bio, :country_id, interest_ids: [])
+    params.require(:profile).permit(:name, :bio, :country_id, :picture, interest_ids: [])
   end
   
   def search_params
