@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://h:pd0ed19f74c7e0955c97088b3b92948e5920b2d4d42effc35aa32fc89667253fc@ec2-34-226-55-20.compute-1.amazonaws.com:37869
+  url: <%= ENV["REDIS_URL"] %>
   channel_prefix: popac_production

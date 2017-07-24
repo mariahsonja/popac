@@ -1,19 +1,19 @@
 ---
 development:
-  cloud_name: ht6jodhfp
-  api_key: 875225361463577
-  api_secret: X9-whme686zohNPwES0AiwCB8Ug
+  cloud_name: <%= ENV["CLOUDINARY_NAME"] %>
+  api_key:    <%= ENV["CLOUDINARY_API_KEY"] %>
+  api_secret: <%= ENV["CLOUDINARY_API_SECRET"] %>
   enhance_image_tag: true
   static_image_support: false
 test:
-  cloud_name: ht6jodhfp
-  api_key: 875225361463577
-  api_secret: X9-whme686zohNPwES0AiwCB8Ug
+  cloud_name: <%= ENV["CLOUDINARY_NAME"] %>
+  api_key:    <%= ENV["CLOUDINARY_API_KEY"] %>
+  api_secret: <%= ENV["CLOUDINARY_API_SECRET"] %>
   enhance_image_tag: true
   static_image_support: false
 production:
-  cloud_name: ht6jodhfp
-  api_key: 875225361463577
-  api_secret: X9-whme686zohNPwES0AiwCB8Ug
+  cloud_name: <%= ENV["CLOUDINARY_NAME"] %>
+  api_key:    <%= ENV["CLOUDINARY_API_KEY"] %>
+  api_secret: <%= ENV["CLOUDINARY_API_SECRET"] %>
   enhance_image_tag: true
   static_image_support: true
