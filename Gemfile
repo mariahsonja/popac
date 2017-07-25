@@ -53,6 +53,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.5'
   gem 'dotenv-rails'
+  gem 'fuubar'
 end
 
 group :test do
