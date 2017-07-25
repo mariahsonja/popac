@@ -1,9 +1,14 @@
 <div class="content container">
-  <div class="row">
-    <%= render partial: 'list', locals: { conversations: @conversations } %>
+  <%= render partial: "profiles/search" %>
 
-    <div class="col-md-9">
-      chat window
+  <div class="row">
+    <% if @conversations.any? %>
+      <%= render partial: 'list', locals: { conversations: @conversations } %>
+    <% else %>
+      <div class="col-md-12">
+        You have no conversations.
+      <div>
+    <% end %>
     </div>
   </div>
 </div>
