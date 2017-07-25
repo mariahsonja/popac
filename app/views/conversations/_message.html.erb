@@ -1,2 +1,5 @@
-<dt><%= message.sender.name %></dt>
+<dt>
+  <%= message.sender.name %>
+  (at <%= message.created_at.strftime("%d/%m/%Y %H:%M:%S") %>)
+</dt>
 <dd><%= message.content %></dd>
