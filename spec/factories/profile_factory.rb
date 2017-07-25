@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :profile do
+    user
     name "Joe Stone"
     bio <<~BIO.squish
       Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -11,5 +12,13 @@ FactoryGirl.define do
       and more recently with desktop publishing software like Aldus PageMaker
       including versions of Lorem Ipsum.
     BIO
+    
+    trait :volunteer do
+      type "Volunteer"
+    end
+    
+    trait :ngo do
+      type "Ngo"
+    end
   end
 end

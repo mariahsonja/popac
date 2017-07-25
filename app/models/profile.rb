@@ -14,7 +14,7 @@ class Profile < ApplicationRecord
   mount_uploader :picture, ProfilePictureUploader
   
   # MARIAH: search  
-  def self.search(params)
+  def self.search(params = {})
     results = unscoped.distinct
     results = results.where(country_id: params[:country_ids]) if params[:country_ids].present?
     results = results.joins(:interests).where(interests: { id: params[:interest_ids] } ) if params[:interest_ids].present?
