@@ -4,7 +4,7 @@
 National College Of Ireland - 2016/2017
 Higher Diploma in Science in Computing - Cloud
 Student: MARIAH SONJA PEREIRA PENHA|16104978|
-Lecturer: Eugene McLaughlin
+Lecturer: Eugene McLaughlin.
 ```
 
 ### How to run
