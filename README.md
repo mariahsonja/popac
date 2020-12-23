@@ -1,12 +1,15 @@
 # Project PoPac NGOs
 
-**National College Of Ireland - 2016/2017**
+[PoPac NGOs](https://popac.herokuapp.com) is an application to connect NGOs and Volunteers. 
 
-Higher Diploma in Science in Computing - Cloud
 
-**Student:** Mariah Sonja Pereira Penha|16104978|
+  **National College Of Ireland Final Project - 2016/2017**
 
-**Lecturer:** Eugene McLaughlin.
+  **Course:** Higher Diploma in Science in Computing - Cloud
+
+  **Student:** Mariah Sonja Pereira Penha |16104978|
+
+  **Lecturer:** Eugene McLaughlin.
 
 ### How to run
 - Start postgresql: `sudo service postgresql start`
@@ -40,6 +43,7 @@ Higher Diploma in Science in Computing - Cloud
 ### Tools
 - http://svgtopng.com/
 
-:email: mariahsonja@hotmail.com
 
 **Thank you!**
+
+:email: mariahsonja@hotmail.com
