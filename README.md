@@ -1,11 +1,12 @@
-# Project: PoPac NGOs
+# Project PoPac NGOs
 
-```
-National College Of Ireland - 2016/2017
+**National College Of Ireland - 2016/2017**
+
 Higher Diploma in Science in Computing - Cloud
-Student: MARIAH SONJA PEREIRA PENHA|16104978|
-Lecturer: Eugene McLaughlin.
-```
+
+**Student:** Mariah Sonja Pereira Penha|16104978|
+
+**Lecturer:** Eugene McLaughlin.
 
 ### How to run
 - Start postgresql: `sudo service postgresql start`
@@ -38,3 +39,7 @@ Lecturer: Eugene McLaughlin.
 
 ### Tools
 - http://svgtopng.com/
+
+:email: mariahsonja@hotmail.com
+
+**Thank you!**
