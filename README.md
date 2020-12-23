@@ -1,15 +1,15 @@
 # Project PoPac NGOs
 
-[PoPac NGOs](https://popac.herokuapp.com) is an application to connect NGOs and Volunteers. 
+**National College Of Ireland Final Project - 2016/2017**
+
+[PoPac NGOs](https://popac.herokuapp.com) is an application built to connect NGOs and Volunteers. 
 
 
-  **National College Of Ireland Final Project - 2016/2017**
+  - **Course:** Higher Diploma in Science in Computing - Cloud
+  - **Lecturer:** Eugene McLaughlin.
+  - **Student:** Mariah Sonja Pereira Penha |16104978|
+  - **Email:** :email: mariahsonja@hotmail.com
 
-  **Course:** Higher Diploma in Science in Computing - Cloud
-
-  **Student:** Mariah Sonja Pereira Penha |16104978|
-
-  **Lecturer:** Eugene McLaughlin.
 
 ### How to run
 - Start postgresql: `sudo service postgresql start`
@@ -44,6 +44,4 @@
 - http://svgtopng.com/
 
 
-**Thank you!**
-
-:email: mariahsonja@hotmail.com
+*Thank you!* 
